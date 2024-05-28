@@ -1,0 +1,30 @@
+@media screen and (max-width: 575px) {
+    .container {
+      margin: 0 auto;
+    }
+    ul {
+      display: none;
+    }
+    .menu {
+      display: block;
+    }
+    nav input[type="checkbox"]:checked + ul {
+      display: block;
+    }
+    
+  
+    nav ul {
+      padding-top: 30px;
+    }
+    nav li {
+      float: none;
+      height: 44px;
+      line-height: 44px;
+      text-align: center;
+    }
+    .logo {
+      width: 17%;
+      right: 4%;
+    }
+  }
+  

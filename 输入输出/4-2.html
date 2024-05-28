@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="newMessage" cols="30" rows="10"></textarea>
+    <br>
+    <button>发布</button>
+    <ul></ul>
+
+</body>
+<script>
+  var ul =document.querySelector("ul");
+  var newMessage=document.querySelector("newMessage");
+  var btn=document.querySelector("button");
+
+
+  
+  btn.onclick=function(){
+  var new_li=document.createElement("li");
+  new_li.innerHTML=newMessage.value+"&nbsp:&nbsp;<a href='#'>删除</a>";
+    ul.insertBefore(new_li,ul.children[0]);
+    newMessage.value=""
+      var as=document.querySelector("a");
+   console.log(as);
+    for( var i in as){
+    as[i].onclick=function(){
+        var conf=confirm("确认删除吗？");
+        if(conf)
+        ul.removeChild(this.parentNode);
+    };
+};
+  }
+
+  
+
+</script>
+</html>

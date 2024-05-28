@@ -1,0 +1,108 @@
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 32px;
+            width: 800px;
+        }
+
+        video {
+            display: block;
+            margin: 0 auto;
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            margin-top: 8px;
+            list-style: none;
+        }
+
+        ul li {
+            margin: 0 16px;
+            float: left;
+        }
+
+        button {
+            padding: 10px;
+            color: white;
+            background-color: #934bc8;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <video src="./video/myVideo.mp4" controls></video>
+    <ul>
+        <li>
+            <button id="pauseOrPlay">播放</button>
+        </li>
+        <li>
+            <button id="fastForward">快进5秒</button>
+        </li>
+        <li>
+            <button id="fastRewind">快退5秒</button>
+        </li>
+        <li>
+            <button id="turnUpVolume">音量+</button>
+        </li>
+        <li>
+            <button id="turnDownVolume">音量-</button>
+        </li>
+        <li>
+            <button id="mute">静音</button>
+        </li>
+    </ul>
+</div>
+</body>
+<script>
+    let video = document.querySelector('video')
+    let pauseOrPlayBtn = document.querySelector('#pauseOrPlay')
+
+    pauseOrPlayBtn.onclick = () => {
+        if (video.paused) {
+            video.play()
+            pauseOrPlayBtn.innerText = '暂停'
+        } else {
+            video.pause()
+            pauseOrPlayBtn.innerText = '播放'
+        }
+    }
+    document.querySelector('#fastForward').onclick = () => {
+        video.currentTime++
+    }
+    document.querySelector('#fastRewind').onclick = () => {
+        video.currentTime--
+    }
+    document.querySelector('#turnUpVolume').onclick = () => {
+        video.volume = Math.min(1, video.volume + 0.1)
+    }
+    document.querySelector('#turnDownVolume').onclick = () => {
+        video.volume = Math.max(0, video.volume - 0.1)
+    }
+
+    let muteBtn = document.querySelector('#mute')
+
+    document.querySelector('#mute').onclick = () => {
+        if (video.muted) {
+            muteBtn.innerHTML = '静音'
+        } else {
+            muteBtn.innerHTML = '解除静音'
+        }
+
+        video.muted = !video.muted
+    }
+</script>
+</html>

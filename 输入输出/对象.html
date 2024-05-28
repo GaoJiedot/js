@@ -1,0 +1,32 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<p></p>
+<script>
+    let except = new Date(prompt("请输入时间", "2024/03/19 21:00"))
+
+    setInterval(function () {
+        let p = document.getElementsByTagName("p")[0]
+        let now = new Date()
+        let delta = (except.getTime() - now.getTime()) / 1000
+
+        if (delta <= 0) {
+            p.innerText = "已到秒杀时间"
+        } else {
+            let days = Math.floor(delta / 60 / 60 / 24)
+            let hours = Math.floor(delta / 60 / 60 % 24)
+            let minutes = Math.floor(delta / 60 % 60)
+            let seconds = Math.floor(delta % 60)
+
+            p.innerText = `距秒杀开始还剩余: ${days}天${hours}时${minutes}分${seconds}秒`
+        }
+    }, 1000)
+</script>
+</body>
+</html>

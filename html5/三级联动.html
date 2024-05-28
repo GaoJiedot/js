@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>省市区三级联动</title>
+</head>
+<body>
+
+
+<form  method="post">
+    <select id="province" onchange="updateCity()">
+    <option value="">请选择省份</option>
+    <option value="0">上海</option>
+    <option value="1">江苏</option>
+    <option value="2">河北</option>
+</select>
+<select id="city" onchange="updateCountry()">
+    <option value="">请选择城市</option>
+</select>
+<select id="country">
+    <option value="">请选择区域</option>
+</select>
+<button type="reset">重置</button>
+<button type="submit">提交</button>
+</form>
+<script>
+var provinceArr = ['上海', '江苏', '河北'];
+var cityArr = [
+    ['上海市'],
+    ['苏州市', '南京市', '扬州市'],
+    ['石家庄', '秦皇岛', '张家口']
+];
+var countryArr = [
+    [['黄浦区', '静安区', '长宁区', '浦东区']],
+    [['虎丘区', '吴中区', '相城区', '姑苏区', '吴江区'], ['玄武区', '秦淮区', '建邺区', '鼓楼区', '浦口区'], ['邗江区', '广陵区', '江都区']],
+    [['长安区', '桥西区', '新华区', '井陉矿区'], ['海港区', '山海关区', '北戴河区', '抚宁区'], ['桥东区', '桥西区', '宣化区', '下花园区']]
+];
+
+function updateCity() {
+    var provinceSelect = document.getElementById('province');
+    var citySelect = document.getElementById('city');
+    var countrySelect = document.getElementById('country');
+    
+    var provinceIndex = provinceSelect.value;
+    
+
+    citySelect.innerHTML = '<option value="">请选择城市</option>';
+    countrySelect.innerHTML = '<option value="">请选择区域</option>';
+    
+    if (provinceIndex !== '') {
+        for (var i = 0; i < cityArr[provinceIndex].length; i++) {
+            var option = document.createElement('option');
+            option.text = cityArr[provinceIndex][i];
+            option.value = i;
+            citySelect.appendChild(option);
+        }
+    }
+}
+
+function updateCountry() {
+    var provinceSelect = document.getElementById('province');
+    var citySelect = document.getElementById('city');
+    var countrySelect = document.getElementById('country');
+    
+    var provinceIndex = provinceSelect.value;
+    var cityIndex = citySelect.value;
+    
+  
+    countrySelect.innerHTML = '<option value="">请选择区域</option>';
+    
+    if (provinceIndex !== '' && cityIndex !== '') {
+        for (var i = 0; i < countryArr[provinceIndex][cityIndex].length; i++) {
+            var option = document.createElement('option');
+            option.text = countryArr[provinceIndex][cityIndex][i];
+            option.value = i;
+            countrySelect.appendChild(option);
+        }
+    }
+}
+</script>
+
+</body>
+</html>

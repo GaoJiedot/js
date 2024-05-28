@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="province" >
+        <option value="0" selected>上海</option>
+        <option value="1" selected>江苏</option>
+        <option value="-2" selected>河北</option>
+        <option value="-1" selected>请选择</option>
+    </select>
+</body>
+<script>
+    var provinceArr = ["上海","江苏","河北"];
+    var province=document.querySelector("#province");
+    // var op= new Option("浙江", 999)
+    for(i in provinceArr){
+        var op=new Option(provinceArr[i],i);
+        province.Option.add(op);
+    }
+    addOption(province,provinceArr);
+
+    province.onchange=function(){
+       console.log=op
+    }
+    
+</script>
+</html>

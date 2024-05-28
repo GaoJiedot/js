@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>电子产品商城</title>
+    <!-- 网页标签图标 -->
+    <link rel="icon" href="images/icon/favicon.ico">
+    <!-- bootstrap引用 -->
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="https://kit.fontawesome.com/aae9b157e1.js" crossorigin="anonymous"></script>
+    <!-- style部分 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .nav-item{
+            margin-left: 5px;
+        }
+        a {
+            color: black !important;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        #box1{
+            margin-top: 20px;
+            text-align: center;
+        }
+        #box1> div{
+            margin-left: 20px;
+            font-size: 14px;
+            font-family: "黑体";
+        }
+        #box1> div img{
+            width: 60px;
+        }
+        #box2> div> p{
+            margin-left: 20px;
+            font-size: 14px;
+            font-family: "黑体";
+        }
+        #box2{
+            margin-left: 20px;
+            text-align: center;
+        }
+        #box2{
+            margin-left: 20px;
+           
+        }
+    </style>
+</head>
+<body>
+<!-- 小屏幕上水平导航栏会切换为垂直的 -->
+<nav class="navbar navbar-expand-sm bg-light mx-4 bg-light">
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item ">
+            <img src="./images/icon/favicon.ico">
+        </li>
+        <li class="nav-item align-self-center ms-4">
+            <a class="nav-link" href="#">首页</a>
+        </li>
+        <li class="nav-item align-self-center">
+            <a class="nav-link" href="#">图标导航</a>
+        </li>
+        <li class="nav-item align-self-center">
+            <a class="nav-link" href="#">优品抢购</a>
+        </li>
+        <li class="nav-item align-self-center">
+            <a class="nav-link" href="#">秒杀专区</a>
+        </li>
+        <li class="nav-item align-self-center">
+            <a class="nav-link" href="#">新品区</a>
+        </li>
+        <li class="nav-item align-self-center">
+            <a class="nav-link" href="#">联系我们</a>
+        </li>
+        <li class="nav-item align-self-center">
+            <a class="nav-link" href="#">用户登录</a>
+        </li>
+    </ul>
+
+</nav>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="./images/lbt1/1.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="./images/lbt1/2.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="./images/lbt1/3.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="./images/lbt1/4.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="./images/lbt1/5.png" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<main>
+ <div class="container my-auto">
+    <div class="row " id="box1">
+       
+        <div class="col-sm-12 col-md-2 col-lg-1">
+            <img src="images/icon/sjpb.png" alt="">
+            <p>手机/平板</p>
+        </div>
+        <div class="col-sm-12 col-md-2 col-lg-1">
+            <img src="images/icon/sbej.png" alt="">
+            <p>手表/耳机</p>
+        </div>
+        <div class="col-sm-12 col-md-2 col-lg-1">
+            <img src="images/icon/dsyy.png" alt="">
+            <p>电视/影音</p>
+        </div>
+        
+        <div class="col-sm-12 col-md-2 col-lg-1">
+            <img src="images/icon/shjd.png" alt="">
+            <p>生活家电</p>
+        </div>
+        <div class="col-sm-12 col-md-2 col-lg-1">
+            <img src="images/icon/xsqcc.png" alt="">
+            <p>显示器/储存</p>
+        </div>
+        <div class="col-sm-12 col-md-2 col-lg-1">
+            <img src="images/icon/xyyh.png" alt="">
+            <p>校园优惠</p>
+        </div>
+        <div class="col-sm-12 col-md-2 col-lg-1">
+            <img src="images/icon/30days.png" alt="">
+            <p>30天无忧购</p>   
+        </div>
+        <div class="col-sm-12 col-md-2 col-lg-1">
+            <img src="images/icon/lqzx.png" alt="">
+            <p>领券中心</p>
+        </div>
+        <div class="col-sm-12 col-md-2 col-lg-1">
+            <img src="images/icon/qyzx.png" alt="">
+            <p>企业咨询</p>
+        </div>
+        <div class="col-sm-12 col-md-2 col-lg-1">
+            <img src="images/icon/zb.png" alt="">
+            <p>直播</p>
+        </div>
+       </div>
+    </div>   
+ </div>
+ <div class="container">
+    <div class="row" id="box2">
+        <div class="col-lg-2">
+            <img src="images/a1.png" alt="">
+            <h4>三星折叠屏系列新品</h4>
+            <p>赠Buds&nbsp;pro</p>
+            <p>享6折保值换新</p>
+            <button class="badge bg-black">立即抢购</button>    
+        </div>
+        <div class="col-lg-2">
+            <img src="images/a2.png" alt="">
+            <h4>65英寸电视Q60Z</h4>
+            <p>精彩量子点&nbsp;逼真画质</p>
+            <p>至高可享300元换新补贴</p>
+            <button class="badge bg-black">立即抢购</button>
+        </div>
+        <div class="col-lg-2">
+            <img src="images/a3.png" alt="">
+            <h4>Galaxy&nbsp;Tab&nbsp;S9&nbsp;FE</h4>
+            <p>赠Buds&nbsp;FE</p>
+            <p>至高200元换新补贴</p>
+            <button class="badge bg-black">立即抢购</button>
+        </div>
+        <div class="col-lg-2">
+            <img src="images/a4.png" alt="">
+            <h4>545l&nbsp;双开门冰箱</h4>
+            <p>晒单赠200元话费</p>
+            <p>至高300元换新补贴</p>
+            <button class="badge bg-black">立即抢购</button>
+        </div>
+    </div>
+ </div>
+</main>
+  
+</body>
+</html>

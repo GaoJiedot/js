@@ -1,0 +1,51 @@
+*{
+    list-style:none;
+    padding: 0;
+    margin: 0;
+}
+.cartBox{
+    width: 940px;
+    margin: 100px auto;
+}
+table{
+    width: 100%;
+    border: o;
+    border-collapse: collapse;
+}
+table th,
+table tbody{
+    border: 1px solid lightblue;
+}
+table thead{
+    border-top: 3px solid skyblue;
+    background-color: skyblue;
+
+}
+tbody:tr:hover{
+    border-color: rgb(238,);
+}
+tr img{
+    width: 100px;
+    height: ;
+    margin-right: 20px;
+    .count{
+        text-align: center
+    }
+
+}
+.goods span{
+    line-height: ;
+}
+.count span{
+    width: 17px;
+    height: 23px;
+    border: 1px solid #ccc;
+}
+.count input{
+    width: 50px;
+
+}
+.foot{
+
+}
+.

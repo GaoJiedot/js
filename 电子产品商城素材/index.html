@@ -47,13 +47,74 @@
             font-family: "黑体";
         }
 
+        .footer{
+            margin-left: 305px;
 
-        .miaosha-container {
-            background-color: rgb(240,240,240);
+            padding: 50px ;
+        }
+        .body-container {
+            background-color: rgb(238, 238, 238);
             margin-top: 30px;
+            padding-bottom: 70px;
+        }
+        #footer>div d-flex{
+
+            height: 60px;
+        }
+        .d-felx p{
+            line-height: 10px;
+
+        }
+        .footer-p{
+            margin-top: 15px;
         }
 
+        #footer  ul li{
 
+            list-style: none;
+        }
+        #footer ul li:first-child{
+            font-size: 14PX;
+            font-weight: bold;
+            margin-bottom: 20PX;
+        }
+        #footer  ul li p{
+            text-decoration: none;
+
+        }
+        .footer {
+            padding: 50px ;
+            margin-left:305px;
+            width: 1300px;
+        }
+        .footer .footer-top {
+            border-bottom: 1px solid #dee2e6;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .footer .footer-top .col {
+            text-align: center;
+        }
+        .footer .footer-top .icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .footer .footer-bottom .col h5 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .footer .footer-bottom .col ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer .footer-bottom .col ul li {
+            margin-bottom: 10px;
+        }
+        .footer .footer-top .d-flex {
+            align-items: center;
+            justify-content: center;
+        }
 
     </style>
 </head>
@@ -240,63 +301,585 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div class="miaosha-container" >
-        <div class="row" style="margin-left:130px;padding-top:50px;">
-            <h2 class="title col-lg-2" >秒杀专区</h2>
-            <span class="col-lg-2" style="padding-top: 5px">距离秒杀结束还剩</span>
-            <div class="col-lg-2" id="djs">
-                <div class="smallBox" id="d"></div>
-                <div class="smallBox" id="h"></div>
-                <div class="smallBox" id="m"></div>
-                <div class="smallBox" id="s"></div>
+    <div class="body-container">
+        <div class="miaosha-container">
+            <div class="row" style="margin-left:130px;padding-top:50px;">
+                <h2 class="title col-lg-2">秒杀专区</h2>
+                <span class="col-lg-2" style="padding-top: 5px">距离秒杀结束还剩</span>
+
+                <div class="col-lg-2" id="djs">
+                    <span id="day">00天</span>
+                    <span id="hour">00时</span>
+                    <span id="min">00分</span>
+                    <span id="second">00秒</span>
+                </div>
             </div>
-        </div>
-        <div class="row text-center" id="box3" style="margin-top:50px;margin-left: 60px">
-                <div class="col-sm-12 col-md-6 col-lg-3"style="margin-left:90px;width:320px;height:320px;background-color: white;border-radius: 15px">
-                    <img src="images/b1.png"  style="width: 150px;height: 150px">
+            <div class="row text-center" id="box3" style="margin-top:50px;margin-left: 60px">
+                <div class="col-sm-12 col-md-6 col-lg-3"
+                     style="margin-left:90px;width:320px;height:320px;background-color: white;border-radius: 15px">
+                    <img src="images/b1.png" style="width: 150px;height: 150px">
                     <h6>三星&nbsp;W24&nbsp;Filp</h6>
                     <p class="text-muted">限时立省500元</p>
                     <br>
-                    <div  class="row" style=" width: 100px;margin-left: 80px">
-                        <P class="text-info col-lg-6">￥7899</P>
-                        <del class="text-muted col-lg-6">￥7799</del>
+                    <div class="row" style=" width: 110px;margin-left: 80px">
+                        <P class="text-info col-lg-6" style="font-weight:bold">￥9499</P>
+                        <del class="text-muted col-lg-6">￥9999</del>
                     </div>
 
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-3" style="margin-left:90px;width:320px;height:320px;background-color: white;border-radius: 15px">
-                        <img src="images/b2.png" style="width: 150px;height: 150px">
+                <div class="col-sm-12 col-md-6 col-lg-3"
+                     style="margin-left:90px;width:320px;height:320px;background-color: white;border-radius: 15px">
+                    <img src="images/b2.png" style="width: 150px;height: 150px">
                     <h6>545L&nbsp;双开门冰箱&nbsp;风冷无霜</h6>
                     <p class="text-muted">限时立省500元</p>
                     <br>
-                    <div class="row" style="width: 100px;margin-left: 80px">
-                        <P class="text-info col-lg-6">￥7899</P>
-                        <del class="text-muted col-lg-6">￥7799</del>
+                    <div class="row" style="width: 110px;margin-left: 80px">
+                        <P class="text-info col-lg-6" style="font-weight:bold">￥2899</P>
+                        <del class="text-muted col-lg-6">￥6690</del>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-3" style="margin-left:90px;width:320px;height:320px;background-color: white;border-radius: 15px">
-                    <img src="images/b3.png"  style="width: 150px;height: 150px">
+                <div class="col-sm-12 col-md-6 col-lg-3"
+                     style="margin-left:90px;width:320px;height:320px;background-color: white;border-radius: 15px">
+                    <img src="images/b3.png" style="width: 150px;height: 150px">
                     <h6>三星画壁艺术电视&nbsp;LS03C</h6>
                     <p class="text-muted">限时立省500元</p>
                     <br>
-                    <div class="row" style="width: 100px;margin-left: 80px">
-                        <P class="text-info col-lg-6">￥7899</P>
-                        <del class="text-muted col-lg-6">￥7799</del>
+                    <div class="row" style="width: 130px;margin-left: 80px">
+                        <P class="text-info  col-lg-6" style="font-weight:bold">￥10499</P>
+                        <del class="text-muted col-lg-6">￥11999</del>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-3"style="margin-left:90px;width:320px;height:320px;background-color: white;border-radius: 20px">
-                    <img src="images/b4.png"  style="width: 150px;height: 150px">
+                <div class="col-sm-12 col-md-6 col-lg-3"
+                     style="margin-left:90px;width:320px;height:320px;background-color: white;border-radius: 20px">
+                    <img src="images/b4.png" style="width: 150px;height: 150px">
                     <h6>Galaxy&nbsp;Tab&nbsp;S7&nbsp;FE </h6>
                     <p class="text-muted" style="">限时立省500元</p>
                     <br>
-                    <div class="row" style="width: 100px;margin-left: 80px">
-                        <P class="text-info col-lg-6">￥7899</P>
-                        <del class="text-muted col-lg-6">￥7799</del>
+                    <div class="row" style="width: 110px;margin-left: 80px">
+                        <P class="text-info col-lg-6" style="font-weight:bold">￥2699</P>
+                        <del class="text-muted col-lg-6">￥4299</del>
                     </div>
                 </div>
+            </div>
         </div>
+        <h2 style="margin-top:50px;margin-left: 100px ">新品区</h2>
+        <div class="xinpng-container text-center" id="box4" style="margin-left: 90px;margin-top: 20px;">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-3"
+                     style="background-color: white;border-radius: 20px;width: 630px;height: 670px;border-radius: 20px">
+                    <img src="images/c.png" height="340px" width="340px" style="margin-top: 120px"/>
+                    <h4 style="font-weight: bold">GaIaxy&nbsp;S23&nbsp;FE&nbsp;湖泊绿&nbsp;8GB+128GB</h4>
+                    <p class="text-muted" style="font-weight: bold">至高享600元换新补贴</p>
+                    <P class="text-info" style="font-weight:bold">￥2699</P>
+                </div>
+                <div class="row col-lg-8">
+                    <div class="row col-lg-12" style="margin-left: 100px">
+                        <div class="col-lg-6"
+                             style="background-color: white;width: 400px;height: 280px;border-radius:20px">
+                            <img src="images/c1.png" height="95px" width="130px" style="margin-top:50px"/>
+                            <h6 style=font-weight:bold>
+                                Galaxy&nbsp;Tab&nbsp;S9&nbsp;FE&nbsp;WLAN石墨灰&nbsp;6GB+128GB </h6>
+                            <p class="text-muted" style="font-size: 14px">至高享200元换新补贴</p>
+                            <P class="text-info" style="font-weight:bold">￥2899</P>
+                            <del class="text-muted" style="font-weight: bold;font-size: 14px">￥2999</del>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="col-lg-6"
+                                 style="background-color: white;width: 400px;height: 280px;border-radius:20px;margin-left: 50px">
+                                <img src="images/c2.png" height="95px" width="130px" style="margin-top:50px"/>
+                                <h6 style=font-weight:bold>
+                                    Galaxy&nbsp;Tab&nbsp;S9&nbsp;FE+WLAN石墨灰&nbsp;6GB+128GB </h6>
+                                <p class="text-muted" style="font-size: 14px">至高享300元换新补贴</p>
+                                <P class="text-info" style="font-weight:bold">￥3399</P>
+                                <del class="text-muted" style="font-weight: bold;font-size: 14px">￥3999</del>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col-lg-12" style="margin-left: 100px;margin-top: 20px">
+                        <div class="col-lg-6"
+                             style="background-color: white;width: 400px;height: 370px;border-radius:20px">
+                            <img src="images/c3.png" height="200px" width="150px" style="margin-top:30px"/>
+                            <h6 style=font-weight:bold> Galaxy&nbsp;Buds&nbsp;FE&nbsp;山岩灰 </h6>
+                            <p class="text-muted" style="font-size: 14px">限时立省150元</p>
+                            <P class="text-info" style="font-weight:bold">￥3399</P>
+                            <del class="text-muted" style="font-weight: bold;font-size: 14px">￥3999</del>
+                        </div>
+                        <div class="col-lg-6"
+                             style="background-color: white;width: 400px;height: 370px;border-radius:20px;margin-left: 60px">
+                            <img src="images/c4.png" height="150px" width="150px" style="margin-top:30px"/>
+                            <h6 style=font-weight:bold>第二代三星随享智能投影仪</h6>
+                            <p class="text-muted" style="font-size: 14px">购机赠便携式移动电源底座</p>
+                            <P class="text-info" style="font-weight:bold">￥4999</P>
 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 style="margin-top:50px;margin-left: 100px ">手机/平板</h2>
+        <div class="sjpb-container text-center" id="box5" style="margin-left: 80px;margin-top: 30px">
+            <div class="row">
+                <div class="col-sm-12 col-lg-3">
+                    <img src="images/d.png" height="620" width="310" style="border-radius: 20px"/>
+                </div>
+                <div class="row col-lg-8" style="margin-left: 70px">
+                    <div class="row col-lg-12">
+                        <div class="row col-sm-12 col-lg-2"
+                             style="background-color:white;width:210px;height:305px;border-radius:20px">
+                            <img src="images/d1.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                Galaxy&nbsp;Z&nbsp;Flip5&nbsp;冰薄荷8GB+256GB</p>
+                            <p class="text-muted" style="font-size: 12px">限时立省500元</p>
+                            <div class="row" style="width: 110px; margin-left: 25px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥2899</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px">￥6690</del>
+                            </div>
+                        </div>
+                        <div class=" row col-sm-12 col-lg-2"
+                             style="background-color:white;width:210px;height: 305px;border-radius:20px;margin-left: 60px">
+                            <img src="images/d2.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                Galaxy&nbsp;Z&nbsp;Flip5&nbsp;冰薄荷8GB+256GB</p>
+                            <p class="text-muted" style="font-size: 12px">限时立省500元</p>
+                            <div class="row" style="width: 110px; margin-left: 25px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥2899</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px">￥6690</del>
+                            </div>
+                        </div>
+                        <div class=" row col-lg-2"
+                             style="background-color:white;width:210px;height: 305px;border-radius:20px;margin-left: 60px">
+                            <img src="images/d3.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                Galaxy&nbsp;Z&nbsp;Flip5&nbsp;冰薄荷8GB+256GB</p>
+                            <p class="text-muted" style="font-size: 12px">限时立省500元</p>
+                            <div class="row" style="width: 110px; margin-left: 25px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥2899</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px">￥6690</del>
+                            </div>
+                        </div>
+                        <div class=" row col-lg-2"
+                             style="background-color:white;width:210px;height: 305px;border-radius:20px;margin-left: 60px">
+                            <img src="images/d4.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                Galaxy&nbsp;Z&nbsp;Flip5&nbsp;冰薄荷8GB+256GB</p>
+                            <p class="text-muted" style="font-size: 12px">限时立省500元</p>
+                            <div class="row" style="width: 110px; margin-left: 25px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥2899</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px">￥6690</del>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col-lg-12" style="margin-top: 20px">
+                        <div class=" row col-lg-3"
+                             style="background-color:white;width:210px;height: 305px;border-radius:20px">
+                            <img src="images/d5.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                Galaxy&nbsp;Z&nbsp;Flip5&nbsp;冰薄荷8GB+256GB</p>
+                            <p class="text-muted" style="font-size: 12px">限时立省500元</p>
+                            <div class="row" style="width: 110px; margin-left: 25px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥2899</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px">￥6690</del>
+                            </div>
+                        </div>
+                        <div class=" row col-lg-3"
+                             style="background-color:white;width:210px;height: 305px;border-radius:20px;margin-left: 60px">
+                            <img src="images/d6.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                Galaxy&nbsp;Z&nbsp;Flip5&nbsp;冰薄荷8GB+256GB</p>
+                            <p class="text-muted" style="font-size: 12px">限时立省500元</p>
+                            <div class="row" style="width: 110px; margin-left: 25px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥2899</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px">￥6690</del>
+                            </div>
+                        </div>
+                        <div class=" row col-lg-3"
+                             style="background-color:white;width:210px;height: 305px;border-radius:20px;margin-left: 60px">
+                            <img src="images/d7.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                Galaxy&nbsp;Z&nbsp;Flip5&nbsp;冰薄荷8GB+256GB</p>
+                            <p class="text-muted" style="font-size: 12px">限时立省500元</p>
+                            <div class="row" style="width: 110px; margin-left: 25px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥2899</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px">￥6690</del>
+                            </div>
+                        </div>
+                        <div class=" row col-lg-3"
+                             style="background-color:white;width:210px;height: 305px;border-radius:20px;margin-left: 60px">
+                            <img src="images/d8.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                Galaxy&nbsp;Z&nbsp;Flip5&nbsp;冰薄荷8GB+256GB</p>
+                            <p class="text-muted" style="font-size: 12px">限时立省500元</p>
+                            <div class="row" style="width: 110px; margin-left: 25px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥2899</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px">￥6690</del>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <h2 style="margin-top:50px;margin-left: 110px ">手表/耳机</h2>
+        <div class="sbej-container text-center" id="box6" style="margin-left: 80px;margin-top: 30px">
+            <div class="row">
+                <div class="col-lg-3">
+                    <img src="images/e.png" height="620" width="310" style="border-radius: 20px"/>
+                </div>
+                <div class="row col-lg-8" style="margin-left: 70px">
+                    <div class="row col-lg-12">
+                        <div class=" row col-lg-2"
+                             style="background-color:white;width:210px;height:305px;border-radius:20px">
+                            <img src="images/e1.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                Galaxy&nbsp;Buds2&nbsp;Pro&nbsp;哥特太空</p>
+                            <p class="text-muted" style="font-size: 12px">限时立省200元</p>
+                            <div class="row" style="width: 110px; margin-left: 25px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥1099</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px">￥1299</del>
+                            </div>
+                        </div>
+                        <div class=" row col-lg-2"
+                             style="background-color:white;width:210px;height: 305px;border-radius:20px;margin-left: 60px">
+                            <img src="images/e2.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                Galaxy&nbsp;Watch6&nbsp;蓝牙版</p>
+                            <p class="text-muted" style="font-size: 12px">享6期0利率</p>
+                            <div class="row" style="width: 110px; margin-left: 40px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥1799</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px"></del>
+                            </div>
+                        </div>
+                        <div class=" row col-lg-2"
+                             style="background-color:white;width:210px;height: 305px;border-radius:20px;margin-left: 60px">
+                            <img src="images/e3.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                Galaxy&nbsp;Watch6&nbsp;Classic&nbsp;蓝牙版</p>
+                            <p class="text-muted" style="font-size: 12px">限时立省500元</p>
+                            <div class="row" style="width: 110px; margin-left: 40px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥2599</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px"></del>
+                            </div>
+                        </div>
+                        <div class=" row col-lg-2"
+                             style="background-color:white;width:210px;height: 305px;border-radius:20px;margin-left: 60px">
+                            <img src="images/e4.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                Galaxy&nbsp;Watch5&nbsp;Pro&nbsp;蓝牙版</p>
+                            <p class="text-muted" style="font-size: 12px">限时立省1000元</p>
+                            <div class="row" style="width: 110px; margin-left: 25px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥1999</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px">￥3099</del>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col-lg-12" style="margin-top: 20px">
+                        <div class=" row col-lg-3"
+                             style="background-color:white;width:210px;height: 305px;border-radius:20px">
+                            <img src="images/e5.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                Galaxy&nbsp;Bud2&nbsp;浅芋紫</p>
+                            <p class="text-muted" style="font-size: 12px">享3期0利率</p>
+                            <div class="row" style="width: 110px; margin-left: 50px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥899</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px"></del>
+                            </div>
+                        </div>
+                        <div class=" row col-lg-3"
+                             style="background-color:white;width:210px;height: 305px;border-radius:20px;margin-left: 60px">
+                            <img src="images/e6.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                Galaxy&nbsp;Bud2&nbsp;香提绿</p>
+                            <p class="text-muted" style="font-size: 12px">享3期0利率</p>
+                            <div class="row" style="width: 110px; margin-left: 50px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥899</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px"></del>
+                            </div>
+                        </div>
+                        <div class=" row col-lg-3"
+                             style="background-color:white;width:210px;height: 305px;border-radius:20px;margin-left: 60px">
+                            <img src="images/e7.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                Galaxy&nbsp;Bud2&nbsp;橄榄黑</p>
+                            <p class="text-muted" style="font-size: 12px">享3期0利率</p>
+                            <div class="row" style="width: 110px; margin-left: 50px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥899</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px"></del>
+                            </div>
+                        </div>
+                        <div class=" row col-lg-3"
+                             style="background-color:white;width:210px;height: 305px;border-radius:20px;margin-left: 60px">
+                            <img src="images/e8.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                Galaxy&nbsp;Bud2&nbsp;山岩灰</p>
+                            <p class="text-muted" style="font-size: 12px">享3期0利率</p>
+                            <div class="row" style="width: 110px; margin-left: 50px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥899</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px"></del>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 style="margin-top:50px;margin-left: 110px ">生活家电</h2>
+        <div class="shjd-container text-center" id="box7" style="margin-left: 80px;margin-top: 30px">
+            <div class="row">
+                <div class="col-lg-3">
+                    <img src="images/f.png" height="620" width="310" style="border-radius: 20px"/>
+                </div>
+                <div class="row col-lg-8" style="margin-left: 70px">
+                    <div class="row col-lg-12">
+                        <div class=" row col-lg-2"
+                             style="background-color:white;width:210px;height:305px;border-radius:20px">
+                            <img src="images/f1.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                488L+字门冰箱无霜保湿双循环 </p>
+                            <p class="text-muted" style="font-size: 12px">动力逄强劲节能高效</p>
+                            <div class="row" style="width: 110px; margin-left: 25px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥3999</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px">￥5599</del>
+                            </div>
+                        </div>
+                        <div class=" row col-lg-2"
+                             style="background-color:white;width:210px;height: 305px;border-radius:20px;margin-left: 60px">
+                            <img src="images/f2.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                10.5KGAI智控除菌洗烘一体机</p>
+                            <p class="text-muted" style="font-size: 12px">泡泡净洗柔洗护衣</p>
+                            <div class="row" style="width: 110px; margin-left: 25px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥3299</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px">￥3999</del>
+                            </div>
+                        </div>
+                        <div class=" row col-lg-2"
+                             style="background-color:white;width:210px;height: 305px;border-radius:20px;margin-left: 60px">
+                            <img src="images/f3.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                655L双开冰箱</p>
+                            <p class="text-muted" style="font-size: 12px">以简胜繁&nbsp;大道致美</p>
+                            <div class="row" style="width: 110px; margin-left: 25px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥5399</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px">￥4299</del>
+                            </div>
+                        </div>
+                        <div class=" row col-lg-2"
+                             style="background-color:white;width:210px;height: 305px;border-radius:20px;margin-left: 60px">
+                            <img src="images/f4.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                三星空调音享系类</p>
+                            <p class="text-muted" style="font-size: 12px">限时立省900元</p>
+                            <div class="row" style="width: 130px; margin-left: 20px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥10499</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px">￥9399</del>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col-lg-12" style="margin-top: 20px">
+                        <div class=" row col-lg-3"
+                             style="background-color:white;width:210px;height: 305px;border-radius:20px">
+                            <img src="images/f5.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                BESPOKE缤色铂格113公斤洗衣机</p>
+                            <p class="text-muted" style="font-size: 12px">AI泡泡净</p>
+                            <div class="row" style="width: 110px; margin-left: 40px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥11299</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px"></del>
+                            </div>
+                        </div>
+                        <div class=" row col-lg-3"
+                             style="background-color:white;width:210px;height: 305px;border-radius:20px;margin-left: 60px">
+                            <img src="images/f6.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                BESPOKE缤色铂格113公斤洗衣机</p>
+                            <p class="text-muted" style="font-size: 12px">Ai洗涤</p>
+                            <div class="row" style="width: 110px; margin-left: 40px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥11999</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px"></del>
+                            </div>
+                        </div>
+                        <div class=" row col-lg-3"
+                             style="background-color:white;width:210px;height: 305px;border-radius:20px;margin-left: 60px">
+                            <img src="images/f7.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                10.5KGAI智控除菌洗衣机</p>
+                            <p class="text-muted" style="font-size: 12px">深层除菌&nbsp;呵护健康</p>
+                            <div class="row" style="width: 110px; margin-left: 25px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥2899</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px">￥6690</del>
+                            </div>
+                        </div>
+                        <div class=" row col-lg-3"
+                             style="background-color:white;width:210px;height: 305px;border-radius:20px;margin-left: 60px">
+                            <img src="images/f8.png"
+                                 style="margin-top:40px;width:140px;height: 140px;margin-left: 20px"/>
+                            <p style="font-size: 12px;font-weight: bold">
+                                10.5KG泡泡净AI智控除菌洗衣机</p>
+                            <p class="text-muted" style="font-size: 12px">泡泡净洗柔洗护衣</p>
+                            <div class="row" style="width: 110px; margin-left: 25px">
+                                <P class="text-info col-lg-6" style="font-weight:bold;font-size: 13px">￥3390</P>
+                                <del class="text-muted col-lg-6" style="font-size: 13px">￥2599</del>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
     </div>
-</main>
+    <footer id="footer" class="footer">
+        <!-- <div class="container"> -->
+        <div class="row footer-top">
+            <div class="col-md-3">
+                <div class="icon">
 
+                </div>
+                <div class="d-flex">
+
+                    <img src="images/icon/footer1.png"  >
+                    <p class="footer-p">专业客服人员团队 提供当季优惠信息</p>
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="icon">
+
+                </div>
+                <div class="d-flex">
+                    <img src="images/icon/footer2.png"><p class="footer-p">7天无理由退货15天换货(定制及特殊商品除外)</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="icon">
+
+                </div>
+                <div class="d-flex">
+                    <img src="images/icon/footer3.png" style="margin-top: 10px"><p class="footer-p">官方正品请安心购买</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="icon">
+
+                </div>
+                <div class="d-flex">
+                    <img src="images/icon/footer4.png"><p class="footer-p">服务热线: 400-810-5858(09:00~22:00)</p>
+                </div>
+            </div>
+        </div>
+        <div class="row footer-bottom">
+            <div class="col-md-2">
+
+                <ul>
+                    <li ><p style="line-height:40px">了解产品</p></li>
+                    <li ><p class="text-muted" style="font-size: 14px;line-height: 5px">手机/平板</p></li>
+                    <li><p class="text-muted" style="font-size: 14px;line-height: 5px">手机/耳机</p></li>
+                    <li><p class="text-muted" style="font-size: 14px;line-height: 5px">电视</p></li>
+                    <li><p class="text-muted" style="font-size: 14px;line-height: 5px">生活家电</p></li>
+                    <li><p class="text-muted" style="font-size: 14px;line-height: 5px">显示器/存储</p></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+
+                <ul>
+                    <li><p style="line-height:40px">我的三星<p></li>
+                    <li><p class="text-muted" style="font-size: 14px;line-height: 5px">我的订单</p></li>
+                    <li><p class="text-muted" style="font-size: 14px;line-height: 5px">我的积分</p></li>
+                    <li><p class="text-muted" style="font-size: 14px;line-height: 5px">地址</p></li>
+                    <li><p class="text-muted" style="font-size: 14px;line-height: 5px">个人资料</p></li>
+                    <li><p class="text-muted" style="font-size: 14px;line-height: 5px">收藏夹</p></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+
+                <ul>
+                    <li><p style="line-height:40px">三星商城指南</p></li>
+                    <li><p class="text-muted" style="font-size: 14px;line-height: 5px">常见问题</p></li>
+                    <li><p class="text-muted" style="font-size: 14px;line-height: 5px">三星商城账号</p></li>
+                    <li><p class="text-muted" style="font-size: 14px;line-height: 5px">产品注册</p></li>
+                    <li><p class="text-muted" style="font-size: 14px;line-height: 5px">物流服务</p></li>
+                    <li><p class="text-muted" style="font-size: 14px;line-height: 5px">售后服务</p></li>
+                    <li><p class="text-muted" style="font-size: 14px;line-height: 5px">专属服务</p></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+
+                <ul>
+                    <li><p style="line-height:40px">服务支持</p></li>
+                    <li><p class="text-muted" style="font-size: 14px;line-height: 5px">关于商城</p></li>
+                    <li><p class="text-muted" style="font-size: 14px;line-height: 5px">关于三星</p></li>
+                    <li><p class="text-muted" style="font-size: 14px;line-height: 5px">自助服务查询</p></li>
+                    <li><p class="text-muted" style="font-size: 14px;line-height: 5px">联系我们</p></li>
+                    <li><p class="text-muted" style="font-size: 14px;line-height: 5px">三星资讯</p></li>
+                    <li><p class="text-muted" style="font-size: 14px;line-height: 5px">新闻报道</p></li>
+                    <li><p class="text-muted" style="font-size: 14px;line-height: 5px">环保声明</p></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <ul>
+                    <li><p style="line-height:40px">关注我们</p></li>
+                    <img src="images/icon/4.png"width="100px"height="40px" style="margin-left: 30px" alt="">
+                </ul>
+            </div>
+        </div>
+        </div>
+    </footer>
+</main>
 </body>
+<script>
+    var endTime = new Date('2024-11-1 18:00:00'), endSeconds = endTime.getTime();
+    var day = 0, hour = 0, min = 0, second = 0;
+    var id = setInterval(miaosha, 1000);
+
+    function miaosha() {
+        var nowTime = new Date();
+        var remaining = parseInt((endSeconds - nowTime.getTime()) / 1000);
+
+        if (remaining > 0) {
+            day = parseInt(remaining / 86400);
+            hour = parseInt(remaining / 3600 % 24);
+            min = parseInt(remaining / 60 % 60);
+            second = parseInt(remaining % 60);
+
+            day = day < 10 ? '0' + day : day;
+            hour = hour < 10 ? '0' + hour : hour;
+            min = min < 10 ? '0' + min : min;
+            second = second < 10 ? '0' + second : second;
+        } else {
+            clearInterval(id);
+            day = hour = min = second = '00';
+        }
+
+        document.getElementById('day').innerText = day + '天';
+        document.getElementById('hour').innerText = hour + '时';
+        document.getElementById('min').innerText = min + '分';
+        document.getElementById('second').innerText = second + '秒';
+    }
+</script>
 </html>

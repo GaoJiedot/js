@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>电子产品商城</title>
+    <link rel="icon" href="img/icon/favicon.ico">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .navbar-nav .nav-link {
+            color: #333;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #000;
+        }
+        .breadcrumb {
+            margin-left: 30px;
+        }
+        .product-thumbnail img {
+            width: 100%;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+        .thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .thumbnail img {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        .thumbnail img.selected {
+            border-color: #007bff;
+        }
+        .price {
+            font-size: 24px;
+            color: red;
+            font-weight: bold;
+        }
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+        }
+        .coupon-btn {
+            margin: 5px 5px 5px 0;
+            padding: 5px 10px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #007bff;
+            cursor: pointer;
+        }
+        .coupon-btn:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .promotion {
+            color: #007bff;
+            font-weight: bold;
+        }
+        .fixed-bottom-bar {
+            background-color: #ffffff;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+            padding: 10px 20px;
+            z-index: 1030;
+        }
+        .fixed-bottom-bar .product-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .fixed-bottom-bar .product-details {
+            font-size: 14px;
+        }
+        .fixed-bottom-bar .product-title {
+            font-weight: bold;
+        }
+        .fixed-bottom-bar .price-info {
+            font-size: 16px;
+        }
+        .fixed-bottom-bar .price-info .price {
+            color: red;
+            font-weight: bold;
+        }
+        .fixed-bottom-bar .buy-now {
+            background-color: #007bff;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 10px;
+        }
+        .selection-table, .details-table {
+            width: 100%;
+            margin: 20px 0;
+        }
+        .selection-table td, .details-table td {
+            padding: 10px;
+            vertical-align: top;
+        }
+        .selection-table .label, .details-table .label {
+            font-weight: bold;
+            color: #333;
+        }
+        .selection-table .value, .details-table .value {
+            color: #666;
+        }
+        .selection-table .value button {
+            width: 100%;
+            margin: 5px 0;
+            padding: 10px 15px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #007bff;
+            cursor: pointer;
+        }
+        .selection-table .value button:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-left: 30px">
+        <a class="navbar-brand" href="#">
+            <img src="images/icon/favicon.ico" alt="Logo">
+        </a>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">图标导航</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">优品抢购</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">秒杀专区</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">新品区</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">联系我们</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">用户登录</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main>
+    <nav class="breadcrumb">
+        <a class="breadcrumb-item" href="#">首页</a>
+        <a class="breadcrumb-item" href="#">手机/平板</a>
+        <span class="breadcrumb-item active">华为 W24 Flip</span>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="product-thumbnail text-center mb-4">
+                    <img id="main-image" src="images/product1/1.png" alt="Product Image">
+                </div>
+                <div class="thumbnails">
+                    <div class="thumbnail">
+                        <img src="images/product1/1.png" alt="Thumbnail 1" onclick="changeImage('images/product1/1.png')" class="selected">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="images/product1/2.png" alt="Thumbnail 2" onclick="changeImage('images/product1/2.png')">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="images/product1/3.png" alt="Thumbnail 3" onclick="changeImage('images/product1/3.png')">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="images/product1/4.png" alt="Thumbnail 4" onclick="changeImage('images/product1/4.png')">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="images/product1/5.png" alt="Thumbnail 5" onclick="changeImage('images/product1/5.png')">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="images/product1/6.png" alt="Thumbnail 6" onclick="changeImage('images/product1/6.png')">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <p>新品 | 人气推荐</p>
+                <h2>华为 W24 Flip</h2>
+                <table class="details-table">
+                    <tr>
+                        <td class="label">秒杀价格</td>
+                        <td class="value">
+                            <div class="price">¥8999.00</div>
+                            <div class="original-price">¥9999</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">领券</td>
+                        <td class="value">
+                            <button class="coupon-btn">299元超三券</button>
+                            <button class="coupon-btn">199元超二券</button>
+                            <button class="coupon-btn">99元超三券</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">优惠</td>
+                        <td class="value promotion">限时秒杀</td>
+                    </tr>
+                    <tr>
+                        <td class="label">赠品</td>
+                        <td class="value">123</td>
+                    </tr>
+                </table>
+                <table class="selection-table">
+                    <tr>
+                        <td colspan="2" class="label">选择机型</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="value">
+                            <button>华为 W24 Flip</button>
+                            <button>华为 W24</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="label">分期0利率</td>
+                    </tr>
+                    <tr>
+                        <td class="value">
+                            <button>至高享6期0利率<br>¥1499.83/每期</button>
+                        </td>
+                        <td class="value">
+                            <button>不需要分期<br>0利率</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="label">以旧换新</td>
+                    </tr>
+                    <tr>
+                        <td class="value">
+                            <button>选择旧机换新机</button>
+                        </td>
+                        <td class="value">
+                            <button>不选择旧机换新机</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="fixed-bottom-bar">
+        <div class="container product-info">
+            <div class="product-details">
+                <div class="product-title">华为 W24 Flip</div>
+                <div>512GB | 12GB | 冰霜白</div>
+                <div>不需要套餐资费(0元) | 赠送服务</div>
+            </div>
+            <div class="price-info">
+                秒杀价格: <span class="price">¥ 8999</span>
+            </div>
+            <button class="btn buy-now">立即购买</button>
+        </div>
+    </div>
+</footer>
+<script>
+    function changeImage(imageUrl) {
+        document.getElementById('main-image').src = imageUrl;
+        const thumbnails = document.querySelectorAll('.thumbnail img');
+        thumbnails.forEach(img => {
+            img.classList.remove('selected');
+            if (img.src === imageUrl) {
+                img.classList.add('selected');
+            }
+        });
+    }
+
+    const endTime = new Date('2024-11-1 18:00:00').getTime();
+    const miaoshaInterval = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = endTime - now;
+
+        if (distance < 0) {
+            clearInterval(miaoshaInterval);
+            document.getElementById('day').innerText = '00天';
+            document.getElementById('hour').innerText = '00时';
+            document.getElementById('min').innerText = '00分';
+            document.getElementById('second').innerText = '00秒';
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('day').innerText = `${days.toString().padStart(2, '0')}天`;
+        document.getElementById('hour').innerText = `${hours.toString().padStart(2, '0')}时`;
+        document.getElementById('min').innerText = `${minutes.toString().padStart(2, '0')}分`;
+        document.getElementById('second').innerText = `${seconds.toString().padStart(2, '0')}秒`;
+    }, 1000);
+</script>
+</body>
+</html>

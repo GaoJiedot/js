@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <link rel="icon" href="images/icon/favicon.ico">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.js"></script>
+    <style>
+        body {
+            background-image: url("images/login_bg.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .container {
+            width: 600px;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 30px;
+            background-color: white;
+            box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .container a {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .container a:hover {
+            text-decoration: underline;
+        }
+
+        .container-2 {
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+
+        .form-control {
+            border: none;
+            border-bottom: 1px solid #333;
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        .btn {
+            border-radius: 30px;
+        }
+
+        .form-control.is-invalid:focus {
+            box-shadow: none;
+        }
+
+        .error_info {
+            display: none;
+            font-size: 0.875em;
+        }
+
+        .error_info.active {
+            display: block;
+        }
+
+        .hr-with-text {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .hr-with-text::before,
+        .hr-with-text::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid #333;
+        }
+
+        .hr-with-text:not(:empty)::before {
+            margin-right: 0.25em;
+        }
+
+        .hr-with-text:not(:empty)::after {
+            margin-left: 0.25em;
+        }
+
+        .center-image {
+            display: flex;
+            justify-content: center;
+        }
+
+        .center-image img {
+            transform: scale(0.6);
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <a href="#">&lt;&lt; 返回</a>
+    <div class="container-2">
+        <h5 class="container-title text-center">欢迎登录华为商城</h5>
+        <form id="loginForm">
+            <div class="mb-3">
+                <input type="text" class="form-control" id="phone" placeholder="请输入手机号"
+                       aria-describedby="phoneError">
+                <p id="phoneError" class="error_info text-danger">手机号格式错误</p>
+            </div>
+            <p class="text-muted">
+                未注册的手机号验证后将自动创建华为商城帐号
+            </p>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="agreement">
+                <label class="form-check-label text-muted" for="agreement" style="font-size:12px;">
+                    已阅读并同意<a href="#">用户协议</a> 和 <a href="#">隐私政策</a>
+                    <span><img src="images/icon/问号.png" alt="问号" style="margin-left: -3px; width: 5%;"></span>
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">下一步</button>
+
+            <div class="hr-with-text mb-1">其他方式登录</div>
+
+            <div class="center-image">
+                <img src="images/icon/loginways.png" alt="其他方式登录">
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+        var phoneInput = document.getElementById("phone");
+        var phoneValue = phoneInput.value;
+        var phoneRegex = /^1[3-9]\d{9}$/;
+        var phoneError = document.getElementById("phoneError");
+
+        if (!phoneRegex.test(phoneValue)) {
+            phoneInput.classList.add("is-invalid");
+            phoneError.classList.add("active");
+            event.preventDefault();
+        } else {
+            phoneInput.classList.remove("is-invalid");
+            phoneError.classList.remove("active");
+        }
+    });
+</script>
+</html>

@@ -6,50 +6,90 @@
     <link rel="icon" href="img/icon/favicon.ico">
     <link href="css/bootstrap.css" rel="stylesheet">
     <script src="js/bootstrap.bundle.js"></script>
-    <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js"></script>
     <style>
         * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
         }
+
+        header {
+            background-color: #F5F5F5;
+        }
+
+        main {
+            background-color: #F5F5F5;
+            margin-bottom: 100px;
+        }
+
+        .col-lg-7 {
+            background-color: white;
+                width: 480px;
+                border-radius: 30px;
+            margin-top: 20px;
+
+            padding-left: 30px;
+
+            p {
+                margin-top: 30px;
+                color: #0d6efd;
+            }
+
+        }
+
         .navbar-nav .nav-link {
             color: #333;
         }
+
         .navbar-nav .nav-link:hover {
             color: #000;
         }
+
         .breadcrumb {
             margin-left: 30px;
+
         }
+
+        .breadcrumb-item {
+            text-decoration: none;
+        }
+
         .product-thumbnail img {
             width: 100%;
             max-width: 650px;
             margin: 0 auto;
         }
+
         .thumbnails {
             display: flex;
             justify-content: center;
             gap: 10px;
         }
+
         .thumbnail img {
             width: 50px;
             height: 50px;
             cursor: pointer;
             border: 2px solid transparent;
         }
+
         .thumbnail img.selected {
             border-color: #007bff;
         }
+
         .price {
             font-size: 24px;
             color: red;
             font-weight: bold;
         }
+
         .original-price {
             text-decoration: line-through;
             color: #999;
         }
+
         .coupon-btn {
             margin: 5px 5px 5px 0;
             padding: 5px 10px;
@@ -59,38 +99,50 @@
             color: #007bff;
             cursor: pointer;
         }
+
         .coupon-btn:hover {
             background-color: #007bff;
             color: #fff;
         }
+
         .promotion {
             color: #007bff;
             font-weight: bold;
         }
+
         .fixed-bottom-bar {
             background-color: #ffffff;
-            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
             padding: 10px 20px;
             z-index: 1030;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
+
         .fixed-bottom-bar .product-info {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         .fixed-bottom-bar .product-details {
             font-size: 14px;
         }
+
         .fixed-bottom-bar .product-title {
             font-weight: bold;
         }
+
         .fixed-bottom-bar .price-info {
             font-size: 16px;
         }
+
         .fixed-bottom-bar .price-info .price {
             color: red;
             font-weight: bold;
         }
+
         .fixed-bottom-bar .buy-now {
             background-color: #007bff;
             color: white;
@@ -98,21 +150,26 @@
             border: none;
             border-radius: 10px;
         }
+
         .selection-table, .details-table {
             width: 100%;
             margin: 20px 0;
         }
+
         .selection-table td, .details-table td {
             padding: 10px;
             vertical-align: top;
         }
+
         .selection-table .label, .details-table .label {
             font-weight: bold;
             color: #333;
         }
+
         .selection-table .value, .details-table .value {
             color: #666;
         }
+
         .selection-table .value button {
             width: 100%;
             margin: 5px 0;
@@ -123,6 +180,7 @@
             color: #007bff;
             cursor: pointer;
         }
+
         .selection-table .value button:hover {
             background-color: #007bff;
             color: #fff;
@@ -164,9 +222,9 @@
 </header>
 <main>
     <nav class="breadcrumb">
-        <a class="breadcrumb-item" href="#">首页</a>
-        <a class="breadcrumb-item" href="#">手机/平板</a>
-        <span class="breadcrumb-item active">华为 W24 Flip</span>
+        <a class="breadcrumb-item text-muted" href="#">首页</a>
+        <a class="breadcrumb-item text-muted" href="#">手机/平板</a>
+        <a class="breadcrumb-item text-muted" href="#">华为&nbsp;W24&nbsp;Flip</a>
     </nav>
     <div class="container">
         <div class="row">
@@ -176,38 +234,44 @@
                 </div>
                 <div class="thumbnails">
                     <div class="thumbnail">
-                        <img src="images/product1/1.png" alt="Thumbnail 1" onclick="changeImage('images/product1/1.png')" class="selected">
+                        <img src="images/product1/1.png" alt="Thumbnail 1"
+                             onclick="changeImage('images/product1/1.png')" class="selected">
                     </div>
                     <div class="thumbnail">
-                        <img src="images/product1/2.png" alt="Thumbnail 2" onclick="changeImage('images/product1/2.png')">
+                        <img src="images/product1/2.png" alt="Thumbnail 2"
+                             onclick="changeImage('images/product1/2.png')">
                     </div>
                     <div class="thumbnail">
-                        <img src="images/product1/3.png" alt="Thumbnail 3" onclick="changeImage('images/product1/3.png')">
+                        <img src="images/product1/3.png" alt="Thumbnail 3"
+                             onclick="changeImage('images/product1/3.png')">
                     </div>
                     <div class="thumbnail">
-                        <img src="images/product1/4.png" alt="Thumbnail 4" onclick="changeImage('images/product1/4.png')">
+                        <img src="images/product1/4.png" alt="Thumbnail 4"
+                             onclick="changeImage('images/product1/4.png')">
                     </div>
                     <div class="thumbnail">
-                        <img src="images/product1/5.png" alt="Thumbnail 5" onclick="changeImage('images/product1/5.png')">
+                        <img src="images/product1/5.png" alt="Thumbnail 5"
+                             onclick="changeImage('images/product1/5.png')">
                     </div>
                     <div class="thumbnail">
-                        <img src="images/product1/6.png" alt="Thumbnail 6" onclick="changeImage('images/product1/6.png')">
+                        <img src="images/product1/6.png" alt="Thumbnail 6"
+                             onclick="changeImage('images/product1/6.png')">
                     </div>
                 </div>
             </div>
             <div class="col-lg-7">
-                <p>新品 | 人气推荐</p>
+                <p>新品|人气推荐</p>
                 <h2>华为 W24 Flip</h2>
                 <table class="details-table">
                     <tr>
-                        <td class="label">秒杀价格</td>
+                        <td class="label text-muted">秒杀价格</td>
                         <td class="value">
                             <div class="price">¥8999.00</div>
                             <div class="original-price">¥9999</div>
                         </td>
                     </tr>
                     <tr>
-                        <td class="label">领券</td>
+                        <td class="label text-muted">领券</td>
                         <td class="value">
                             <button class="coupon-btn">299元超三券</button>
                             <button class="coupon-btn">199元超二券</button>
@@ -215,12 +279,14 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="label">优惠</td>
-                        <td class="value promotion">限时秒杀</td>
+                        <td class="label text-muted">优惠</td>
+                        <td class="value promotion text-primary">限时秒杀</td>
                     </tr>
                     <tr>
-                        <td class="label">赠品</td>
-                        <td class="value">123</td>
+                        <td class="label text-muted">赠品</td>
+                        <td class="value text-primary">
+                            晒单返100元话(签收之日起30天内评价15个字+3张图片且无退换货咨询客服领取)
+                        </td>
                     </tr>
                 </table>
                 <table class="selection-table">
@@ -265,10 +331,10 @@
         <div class="container product-info">
             <div class="product-details">
                 <div class="product-title">华为 W24 Flip</div>
-                <div>512GB | 12GB | 冰霜白</div>
-                <div>不需要套餐资费(0元) | 赠送服务</div>
+                <div class="text-muted">512GB|12GB|冰霜白</div>
+                <div class="text-muted">不需要套餐资费(0元)|赠送服务</div>
             </div>
-            <div class="price-info">
+            <div class="price-info text-muted">
                 秒杀价格: <span class="price">¥ 8999</span>
             </div>
             <button class="btn buy-now">立即购买</button>
